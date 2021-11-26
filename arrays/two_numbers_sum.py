@@ -1,13 +1,13 @@
 def two_numbers_sum(arr,target_number):
-    result = []
-    for i in range(len(arr) -1):
-        for j in range(len(arr) -1, 0,-1):
-            if i == j:
-                break
-            if arr[i] + arr[j]== target_number:
-                result.append(arr[j])
-                result.append(arr[i])
-    return result
+    result = {}
+    for i in arr:
+        if target_number - i in result:
+            return [target_number- i,i]
+        else:
+            result[i] = True
+    return []
+            
+    
             
             
             
